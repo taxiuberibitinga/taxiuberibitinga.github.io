@@ -1,0 +1,262 @@
+/* styles.css */
+
+/* Reset básico e estilização do corpo */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Estilos do cabeçalho */
+header {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('hero-bg.jpg') no-repeat center center/cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 800px;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    margin: 0;
+}
+
+.hero-content p {
+    font-size: 1.6em;
+    margin: 10px 0;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    color: #fff;
+    background-color: #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    margin: 15px 0;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.contact-info {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+.phone-number a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 1.5em;
+    transition: color 0.3s;
+}
+
+.phone-number a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.whatsapp-link {
+    display: inline-block;
+    padding: 10px;
+    background-color: #25D366;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.whatsapp-link:hover {
+    background-color: #1DA851;
+    transform: scale(1.05);
+}
+
+.whatsapp-link img {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+/* Estilos da seção de preços */
+.pricing {
+    padding: 60px 20px;
+    text-align: center;
+    background: #f8f9fa;
+}
+
+.pricing h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.pricing-table {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.pricing-column {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    max-width: 400px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.pricing-column:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.pricing-column h3 {
+    font-size: 2em;
+    margin: 0 0 10px;
+}
+
+.price {
+    font-size: 2.2em;
+    color: #007bff;
+    margin: 10px 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 5px 0;
+}
+
+.whatsapp-button-bottom {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    color: #fff;
+    background-color: #25D366;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 20px;
+}
+
+.whatsapp-button-bottom:hover {
+    background-color: #1DA851;
+    transform: scale(1.05);
+}
+
+/* Botão flutuante do WhatsApp */
+.whatsapp-button-floating {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    z-index: 1000;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.whatsapp-button-floating:hover {
+    background-color: #1DA851;
+    transform: scale(1.1);
+}
+
+.whatsapp-button-floating img {
+    width: 50px;
+    height: 50px;
+}
+
+/* Estilos para seções adicionais */
+.about, .contact {
+    padding: 60px 20px;
+    text-align: center;
+    background: #f8f9fa;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* Classes de animação */
+.animate-fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.animate-slide-in {
+    animation: slideIn 1s ease-out;
+}
+
+.animate-delay-1s {
+    animation-delay: 1s;
+}
+
+.animate-delay-2s {
+    animation-delay: 2s;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-content p {
+        font-size: 1.2em;
+    }
+
+    .btn-primary, .whatsapp-button-bottom {
+        font-size: 0.9em;
+        padding: 10px 20px;
+    }
+
+    .pricing h2 {
+        font-size: 2em;
+    }
+
+    .pricing-column h3 {
+        font-size: 1.6em;
+    }
+
+    .price {
+        font-size: 1.8em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+}
